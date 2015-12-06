@@ -24,6 +24,8 @@ abstract class AbstractPoll
     protected $onSuccess;
     /** @var int */
     protected $workerCount;
+    /** @var OwnershipFacade */
+    protected $ownershipFacade;
 
     /**
      * AbstractPollMySQL constructor.
@@ -35,6 +37,7 @@ abstract class AbstractPoll
     {
         $this->resourceSettingList = $resourceSettingList;
         $this->onSuccess = $onSuccess;
+        $this->ownershipFacade = new OwnershipFacade();
     }
 
     /**
@@ -75,12 +78,11 @@ abstract class AbstractPoll
      */
     protected function execute(array $sliceList)
     {
-        $ownershipFacade = new OwnershipFacade();
         $pollPerformer = $this->getPollPerformer();
-        $ownershipFacade->setPerformer($pollPerformer);
+        $this->ownershipFacade->setPerformer($pollPerformer);
 
         foreach ($sliceList as $slice) {
-            $ownershipManager = $ownershipFacade->buildManager($slice);
+            $ownershipManager = $this->ownershipFacade->buildManager($slice);
             if ($ownershipManager->acquire() === false) {
                 continue;
             }
