@@ -3,15 +3,21 @@ language: php
 install:
   - travis_retry composer install --no-interaction --prefer-source
 
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 php:
   - 5.5
   - hhvm
 
 before_script:
   - composer self-update
-  - composer install --prefer-source --no-interaction --dev
+  - composer install --prefer-stable --no-interaction --dev
 
-script: phpunit vendor/bin/phpunit -c build/travis-ci.xml
+script: php vendor/bin/phpunit -c build/travis-ci.xml
 
 matrix:
   allow_failures:
