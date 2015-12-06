@@ -1,0 +1,9 @@
+.idea/
+vendor/
+coverage/
+*.log
+.hg
+*.orig
+.hgignore
+*.swp
+.DS_Store

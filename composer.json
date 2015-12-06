@@ -1,0 +1,23 @@
+{
+    "name": "jiangyu/ShardingPreemption",
+    "description": "A micro shard preemption framework.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "JiangYu",
+            "email": "yu.jiang@funplus.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Daemon\\Sharding\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "phpunit/phpunit": "4.8.*",
+        "mockery/mockery": "0.9.*",
+        "symfony/var-dumper": "~3.0"
+    }
+}
