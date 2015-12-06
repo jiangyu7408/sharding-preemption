@@ -7,7 +7,11 @@ php:
   - 5.5
   - hhvm
 
-script: phpunit --configuration ./build/travis-ci.xml
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+
+script: phpunit vendor/bin/phpunit -c build/travis-ci.xml
 
 matrix:
   allow_failures:
