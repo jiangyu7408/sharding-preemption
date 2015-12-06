@@ -15,7 +15,7 @@ php:
 
 before_script:
   - composer self-update
-  - composer install --prefer-stable --no-interaction --dev
+  - composer install --prefer-dist --no-interaction --dev
 
 script: php vendor/bin/phpunit -c build/travis-ci.xml
 
