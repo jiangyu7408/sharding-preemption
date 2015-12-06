@@ -1,6 +1,13 @@
 # ShardingPreemption
 A micro shard preemption framework.
 
+Suppose you have 100 shards, and you have 10 workers to handle all these shards, so each of the workers can handle 10 shards, and each shard can only be handled by 1 worker.
+
+
+By spliting all 100 shards to 10 slices, and fire 10 workers at the same time, each worker try to occupy a slice, they can take over all those shards finally.
+
+If workers are not working on 1 machine, then some DLM（Distributed Lock Manager）solutions can be imported to reach that goal.
+
 ```
 $options = getopt('', ['worker:']);
 
