@@ -1,7 +1,7 @@
 language: php
 
 install:
-  - travis_retry composer install --no-interaction --prefer-source
+  - travis_retry composer install --no-interaction --prefer-dist --dev -o
 
 sudo: false
 
