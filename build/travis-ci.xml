@@ -9,10 +9,12 @@
          beStrictAboutTodoAnnotatedTests="true"
          colors="true"
          verbose="true">
-    <testsuite name="Database">
+    <testsuite name="Resource">
         <directory suffix="Test.php">../tests/unit/Database</directory>
     </testsuite>
-
+    <testsuite name="Facade">
+        <file>../tests/unit/FacadeTest.php</file>
+    </testsuite>
     <logging>
         <log type="coverage-text" target="php://stdout"/>
     </logging>
