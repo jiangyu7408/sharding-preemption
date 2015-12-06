@@ -11,16 +11,15 @@ namespace Daemon\Sharding\Resource\Database;
 use Daemon\Sharding\Resource\ResourceFactory;
 
 /**
- * Class ShardConfigTest.
+ * Class ResourceTest.
  */
-class ShardConfigTest extends \PHPUnit_Framework_TestCase
+class ResourceTest extends \PHPUnit_Framework_TestCase
 {
     /**
      */
     public function testShardFactory()
     {
         $setting = [
-            'type' => 'mysql',
             'host' => '127.0.0.1',
             'port' => '3306',
             'username' => 'hello',
@@ -34,6 +33,33 @@ class ShardConfigTest extends \PHPUnit_Framework_TestCase
         $identity = $shardConfig->getUniqueIdentity();
         $this->assertTrue(is_string($identity));
         $this->assertTrue(strlen($identity) > 0);
+    }
+
+    public function testBadMethod()
+    {
+        $factory = new ResourceFactory();
+        try {
+            $factory->make([]);
+        } catch (\Exception $e) {
+            $this->assertEquals('BadMethodCallException', get_class($e));
+        }
+    }
+
+    public function testBadKey()
+    {
+        $setting = [
+            'port' => '3306',
+            'username' => 'hello',
+            'password' => 'world',
+            'database' => 'shard_1',
+        ];
+        $factory = new ResourceFactory();
+        $factory->setPrototype(new ShardConfig());
+        try {
+            $factory->make($setting);
+        } catch (\Exception $e) {
+            $this->assertEquals('InvalidArgumentException', get_class($e));
+        }
     }
 
     /**
