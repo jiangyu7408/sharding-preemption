@@ -1,6 +1,9 @@
 {
     "name": "jiangyu/sharding-preemption",
     "description": "A micro shard preemption framework.",
+    "keywords": [
+        "sharding", "shard", "queue", "lock", "worker"
+    ],
     "license": "MIT",
     "authors": [
         {
