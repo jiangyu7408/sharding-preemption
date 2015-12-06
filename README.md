@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jiangyu7408/sharding-preemption.svg)](https://travis-ci.org/jiangyu7408/sharding-preemption)
 # ShardingPreemption
 A micro shard preemption framework.
 
