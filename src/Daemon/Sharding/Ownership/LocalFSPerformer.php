@@ -16,8 +16,6 @@ use Daemon\Sharding\Resource\ResourceInterface;
  */
 class LocalFSPerformer implements OwnershipInterface
 {
-    /** @var ResourceInterface */
-    protected $resource;
     /** @var resource */
     protected $fileHandle;
     /** @var string */
