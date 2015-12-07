@@ -2,6 +2,7 @@ language: php
 
 before_install:
   - pip install --user codecov
+  - pip install -U requires.io
 
 install:
   - travis_retry composer install --no-interaction --prefer-dist --dev -o
@@ -26,6 +27,7 @@ script:
 after_success:
   - codecov
   - bash <(curl -s https://codecov.io/bash)
+  - requires.io update-site -t 0f5c9e1926722664b9de90cb1114285ae2b6ed87 -r REPO
 
 matrix:
   allow_failures:
