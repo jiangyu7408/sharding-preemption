@@ -19,6 +19,9 @@ before_script:
 
 script: php vendor/bin/phpunit -c build/travis-ci.xml
 
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
 matrix:
   allow_failures:
     - php: hhvm
