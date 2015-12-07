@@ -3,6 +3,7 @@
 [![Packagist Version](https://img.shields.io/packagist/v/jiangyu/sharding-preemption.svg?style=flat-square)](https://packagist.org/packages/jiangyu/sharding-preemption)
 [![Total Downloads](https://img.shields.io/packagist/dt/jiangyu/sharding-preemption.svg?style=flat-square)](https://packagist.org/packages/jiangyu/sharding-preemption)
 [![Code Climate](https://codeclimate.com/repos/566514d8c92a3c3880000919/badges/dd9269505f16881f8df0/gpa.svg?style=flat-square)](https://codeclimate.com/repos/566514d8c92a3c3880000919/feed)
+[![Test Coverage](https://codeclimate.com/repos/566514d8c92a3c3880000919/badges/dd9269505f16881f8df0/coverage.svg)](https://codeclimate.com/repos/566514d8c92a3c3880000919/coverage)
 
 # ShardingPreemption
 A micro shard preemption framework.
