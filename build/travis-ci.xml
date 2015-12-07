@@ -16,7 +16,7 @@
         <file>../tests/unit/FacadeTest.php</file>
     </testsuite>
     <logging>
-        <log type="coverage-clover" target="coverage.xml"/>
+        <log type="coverage-clover" target="logs/clover.xml"/>
     </logging>
 
     <filter>
