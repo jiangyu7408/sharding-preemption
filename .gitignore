@@ -7,4 +7,4 @@ coverage/
 .hgignore
 *.swp
 .DS_Store
-/build/coverage.xml
+/build/logs/
