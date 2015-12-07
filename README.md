@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/jiangyu7408/sharding-preemption.svg)](https://travis-ci.org/jiangyu7408/sharding-preemption)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](license.md)
+[![Packagist Version](https://img.shields.io/packagist/v/jiangyu/sharding-preemption.svg?style=flat-square)](https://packagist.org/packages/jiangyu/sharding-preemption)
+[![Total Downloads](https://img.shields.io/packagist/dt/jiangyu/sharding-preemption.svg?style=flat-square)](https://packagist.org/packages/jiangyu/sharding-preemption)
 
 # ShardingPreemption
 A micro shard preemption framework.
