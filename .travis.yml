@@ -1,5 +1,8 @@
 language: php
 
+before_install:
+  - pip install --user codecov
+
 install:
   - travis_retry composer install --no-interaction --prefer-dist --dev -o
 
@@ -20,7 +23,7 @@ before_script:
 script: php vendor/bin/phpunit -c build/travis-ci.xml
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov
 
 matrix:
   allow_failures:
